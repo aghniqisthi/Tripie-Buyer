@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_margin="25dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.authentication.register.RegisterSuccessFragment">
+    
+    <ImageView
+        android:contentDescription="@string/image_location"
+        android:id="@+id/imgSuccess"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:src="@drawable/success_process"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        />
+
+    <TextView
+        android:id="@+id/headerAkunBerhasilDibuat"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/imgSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/akun_berhasil_dibuat"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24sp"
+
+        />
+    
+    <TextView
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setelah_ini_anda_dapat_login_menggunakan_akun_yang_telah_terdaftar"
+        android:layout_below="@id/headerAkunBerhasilDibuat" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/masuk"
+        android:backgroundTint="#0095F6" />
+
+</RelativeLayout>

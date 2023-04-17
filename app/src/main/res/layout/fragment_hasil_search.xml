@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.home.searchfragments.HasilSearchFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btnBackHome"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/image_button_back"
+                    android:layout_marginStart="25dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                <TextView
+                    android:layout_marginEnd="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_flight"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textAlignment="center" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/tvBandaraAsal"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvBandaraTujuan"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/ivPlane"
+                        android:contentDescription="@string/line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/airplane"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/tvKotaAsal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/tvBandaraAsal" />
+
+                    <TextView
+                        android:id="@+id/tvKotaTujuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/tvBandaraTujuan"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_above="@id/barPembatas"
+                android:layout_margin="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvTanggal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvJumlahPenumpang"
+                    android:layout_width="150dp"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvKelas"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd"/>
+
+            </RelativeLayout>
+
+                <View
+                    android:id="@+id/barPembatas"
+                    android:layout_below="@id/ivPlane"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#D1CACA"
+                    android:backgroundTint="#D1CACA" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHasilSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutSearch"
+        android:layout_marginTop="15dp"
+        tools:listitem="@layout/item_histori" />
+
+</RelativeLayout>

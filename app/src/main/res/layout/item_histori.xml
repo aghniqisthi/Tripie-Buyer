@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_margin="16dp">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:id="@+id/tvKodeBandaraAsal"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvKodeBandaraTujuan"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:contentDescription="@string/line"
+                android:id="@+id/ivPlane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/airplane"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tvKotaBandaraAsal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_below="@id/tvKodeBandaraAsal"/>
+
+            <TextView
+                android:id="@+id/tvJamBerangkat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@id/tvKotaBandaraAsal"
+                android:paddingTop="5dp" />
+
+            <TextView
+                android:id="@+id/tvKotaBandaraTujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_below="@id/tvKodeBandaraTujuan"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/tvJamPulang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_below="@id/tvKotaBandaraTujuan"
+                android:paddingTop="5dp"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/tvHargatiket"
+                android:layout_below="@id/tvJamBerangkat"
+                android:paddingTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0066B3"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#0095F6"
+                android:layout_below="@id/tvJamBerangkat"
+                android:layout_marginTop="25dp"
+                android:text="@string/see_ticket_details"
+                android:textAllCaps="false"/>
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/barPembatas"
+            android:layout_below="@id/ivPlane"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D1CACA"
+            android:backgroundTint="#D1CACA" />
+
+    </androidx.cardview.widget.CardView>
+

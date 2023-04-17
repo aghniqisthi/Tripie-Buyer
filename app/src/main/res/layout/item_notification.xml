@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvBandaraAsal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Pembayaranmu sudah terverifikasi"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:fontFamily="@font/poppins_semibold" />-->
+
+        <TextView
+            android:id="@+id/tvNotifikasiMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pembayaranmu_sudah_kami_terima_mohon_tunggu_konfirmasi_selanjutnya_lihat_rincian_penerbangan_pada_histori_pesanan_detail_tiket"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:justificationMode="inter_word"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

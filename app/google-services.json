@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "990609930426",
+    "project_id": "tripie-buyer",
+    "storage_bucket": "tripie-buyer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990609930426:android:609533e21b084fd4f7ea83",
+        "android_client_info": {
+          "package_name": "binar.academy.kelompok6.tripie_buyer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990609930426-vf9v7our7m1bap0r6gouki4vg6iji8lq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "binar.academy.kelompok6.tripie_buyer",
+            "certificate_hash": "84aa2a0a7b208b5c6397ff4425428181c36f27a7"
+          }
+        },
+        {
+          "client_id": "990609930426-mu447hsc03n79n77ec02djis9nqd0rht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_6n_4zZ0QNtZXa2ZzCgXSrHA9CdZ2-EM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990609930426-mu447hsc03n79n77ec02djis9nqd0rht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

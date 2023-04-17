@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.histori.DetailHistoriFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/buttonBack"
+                android:layout_marginStart="25dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:contentDescription="@string/image_button_back" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_back"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_ticket"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semibold"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_below="@id/tvHeader"
+            android:layout_marginTop="20dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+
+
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp"
+            app:contentPaddingBottom="0dp"
+            app:contentPaddingLeft="0dp"
+            app:contentPaddingRight="0dp"
+            app:contentPaddingTop="0dp">
+
+            <RelativeLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp">
+
+                <TextView
+                    android:id="@+id/tvSubHeaderPenumpang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/penumpang"
+                    android:textColor="#9F9A9A"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNamaPenumpang"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jamal_agung"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvSubHeaderPenumpang" />
+
+                <ImageView
+                    android:labelFor="@id/tvNamaPenumpang"
+                    android:contentDescription="@string/line"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_down"
+                    android:layout_below="@id/tvNamaPenumpang" />
+
+                <RelativeLayout
+                    android:id="@+id/container1"
+                    android:layout_below="@id/tvNamaPenumpang"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvBandaraAsal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:maxWidth="90dp"
+                        android:text="@string/cgk_jakarta"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvBandaraTujuan"
+                        android:layout_marginTop="14dp"
+                        android:layout_below="@id/tvBandaraAsal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="90dp"
+                        android:text="@string/dps_bali"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvTanggalBerangkat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_toStartOf="@id/tvJamBerangkat"
+                        android:layout_toEndOf="@+id/tvBandaraAsal"
+                        android:paddingEnd="20dp"
+                        android:text="@string/_26_nov_2022"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/tvTanggalSampai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvBandaraAsal"
+                        android:layout_marginTop="14dp"
+                        android:layout_toStartOf="@+id/tvJamSampai"
+                        android:layout_toEndOf="@+id/tvBandaraTujuan"
+                        android:paddingEnd="20dp"
+                        android:text="@string/_26_nov_2022"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/tvJamBerangkat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/_07_40"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tvJamSampai"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="14dp"
+                        android:layout_below="@id/tvBandaraAsal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="@string/_09_10"
+
+
+                        />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/barPembatas"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="200dp"
+                android:background="#D1CACA"
+                android:backgroundTint="#D1CACA" />
+
+
+            <RelativeLayout
+                android:layout_marginTop="220dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvSubHeaderPembayaran"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/harga"
+                    android:textColor="#0066B3"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_below="@id/tvSubHeaderPembayaran"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tvSubHeaderPembayaran1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipe_penerbangan"
+                    android:textColor="#9F9A9A"
+                    android:textStyle="bold"
+                    />
+                
+                <TextView
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/tvHargatiket"
+                    android:textAlignment="textEnd"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/idr_1_152_580"
+                    android:textColor="#0066B3"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTipePenerbangan"
+                    android:layout_below="@id/tvSubHeaderPembayaran"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipe"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutBackDate"
+                    android:layout_below="@id/tvTipePenerbangan"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvLblBackDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tanggal_pulang"
+                        android:textColor="#9F9A9A"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvPulang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/tanggal"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvSubHeaderBookingID"
+                    android:layout_below="@id/layoutBackDate"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/booking_id"
+                    android:textStyle="bold"
+                    android:textColor="#9F9A9A"
+                    android:layout_gravity="start" />
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/layoutBackDate"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="40dp"
+                        android:id="@+id/tvSubHeaderKelas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kelas"
+                        android:textStyle="bold"
+                        android:textColor="#9F9A9A"
+                        android:layout_gravity="center_horizontal"
+
+
+
+                        />
+
+                    <TextView
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/layoutBackDate"
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/tvSubHeaderMaskapai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="@string/maskapai"
+                        android:textAlignment="viewEnd"
+                        android:textColor="#9F9A9A"
+                        android:textStyle="bold"
+
+                        />
+
+
+                <TextView
+                    android:id="@+id/tvBookingID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0066B3"
+                    android:textStyle="bold"
+                    android:text="@string/_12345"
+                    android:layout_below="@id/tvSubHeaderBookingID"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_below="@id/tvSubHeaderKelas"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/tvKelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0066B3"
+                    android:textStyle="bold"
+                    android:text="@string/ekonomi"
+                    />
+
+                <TextView
+                    android:layout_below="@id/tvSubHeaderMaskapai"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/tvMaskapai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0066B3"
+                    android:textStyle="bold"
+                    android:text="@string/batik_air" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

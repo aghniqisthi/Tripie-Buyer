@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#594040"
+    tools:context=".view.whistlist.DetailFlightFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="25dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:contentDescription="@string/image_button_back" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/bar"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:id="@+id/header_title"
+                style="@style/HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/flight_detail"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header_title"
+                android:layout_marginTop="20dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ScrollView
+                        android:id="@+id/scrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_margin="25dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/iv_favorit"
+                                android:contentDescription="@string/favorit"
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:scaleType="center"
+                                android:src="@drawable/bg_onboarding_1" />
+
+                            <TextView
+                                android:id="@+id/txtJudulFavorit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iv_favorit"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtNamaBandara"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/txtJudulFavorit" />
+
+                            <ImageView
+                                android:id="@+id/icLocation"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@string/image_location"
+                                android:layout_below="@id/txtNamaBandara"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_baseline_location_on_24" />
+
+                            <TextView
+                                android:id="@+id/lokasiTempat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/txtNamaBandara"
+                                android:layout_toEndOf="@id/icLocation"  />
+
+                            <TextView
+                                android:id="@+id/txtDescFavorit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/lokasiTempat"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/poppins"/>
+
+                        </RelativeLayout>
+
+                    </ScrollView>
+
+                    <RelativeLayout
+                        android:id="@+id/cardFavorit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true" >
+
+                        <ImageButton
+                            android:id="@+id/btnFavorit"
+                            android:contentDescription="@string/favorit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/background_circle_white"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_unfavorite" />
+
+                        <TextView
+                            android:id="@+id/txtfav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/red"
+                            android:layout_toEndOf="@id/btnFavorit"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/favorit" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+</RelativeLayout>
